@@ -114,7 +114,7 @@ FREContext *context;
 #pragma mark - Alert
 
 
--(void)showAlertWithTitle: (NSString *)title 
+-(void)showAlertWithTitle: (NSString *)title
                   message: (NSString*)message 
                closeLabel: (NSString*)closeLabel
               otherLabels: (NSString*)otherLabels
@@ -124,12 +124,13 @@ FREContext *context;
     context = ctx;
     
     //Create our alert.
-    alert = [[[UIAlertView alloc] initWithTitle:title 
-                                             message:message
-                                            delegate:self 
-                                   cancelButtonTitle:closeLabel
-                                   otherButtonTitles:nil] retain];
-    
+	alert = [[[UIAlertView alloc] initWithTitle:title
+									   message:message
+									  delegate:self
+							 cancelButtonTitle:closeLabel
+							 otherButtonTitles: nil] retain];
+
+
 
     if (otherLabels && ![otherLabels isEqualToString:@""]) { 
         //Split our labels into an array
@@ -142,8 +143,16 @@ FREContext *context;
                 [alert addButtonWithTitle:label];
         }
     }
+	
+	[self performSelectorOnMainThread: @selector(threadedShowAlertWithTitle:)
+                           withObject:title waitUntilDone:NO];
+
     FREDispatchStatusEventAsync(context, (uint8_t*)"nativeDialog_opened", NULL);
-    [alert show];
+}
+
+-(void)threadedShowAlertWithTitle: (NSString*)title
+{
+	[alert show];
 }
 
 
@@ -563,9 +572,10 @@ NSMutableArray *tableItemList = nil;
     
     FREDispatchStatusEventAsync(context, (uint8_t*)"nativeListDialog_change", (uint8_t*)[returnString UTF8String]);
 }
-
 - (void)tableAlert:(SBTableAlert *)tableAlert didDismissWithButtonIndex:(NSInteger)buttonIndex{
+	
     NSString *buttonID = [NSString stringWithFormat:@"%d", buttonIndex];
+	
     FREDispatchStatusEventAsync(context, (uint8_t*)"nativeDialog_closed", (uint8_t*)[buttonID UTF8String]);
     //Cleanup references.
     
@@ -684,9 +694,19 @@ NSMutableArray *tableItemList = nil;
 #pragma mark - Button Click
 
 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    NSString *buttonID = [NSString stringWithFormat:@"%d", buttonIndex];
+	NSLog(@"didDismissWithButtonIndex Close clicked: ");
+	
+    FREDispatchStatusEventAsync(context, (uint8_t*)"nativeDialog_closed", (uint8_t*)[buttonID UTF8String]);
+    //Cleanup references.
+	[alert release];
+    
+}
+
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    
     //Create our params to pass to the event dispatcher.
     NSString *buttonID = [NSString stringWithFormat:@"%d", buttonIndex];
     FREDispatchStatusEventAsync(context, (uint8_t*)"nativeDialog_closed", (uint8_t*)[buttonID UTF8String]);

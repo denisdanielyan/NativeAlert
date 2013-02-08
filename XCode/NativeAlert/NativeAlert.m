@@ -63,7 +63,7 @@ FREObject showAlertWithTitleAndMessage(FREContext ctx, void* funcData, uint32_t 
        // [alert hide];
     }
     alert = [[MobileAlert alloc] init];
-    [alert showAlertWithTitle:titleString 
+    [alert showAlertWithTitle:titleString
                       message:messageString 
                    closeLabel:closeLabelString
                   otherLabels:otherLabelsString
@@ -82,9 +82,9 @@ FREObject showProgressPopup(FREContext ctx, void* funcData, uint32_t argc, FREOb
 {
     //Temporary values to hold our actionscript code.
     uint32_t titleLength;
-    const uint8_t *title;
+    const uint8_t *title=NULL;
     uint32_t messageLength;
-    const uint8_t *message;
+    const uint8_t *message=NULL;
     double progressParam;
     
     uint32_t showActivityValue, cancleble;

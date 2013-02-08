@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="pl/mateuszmackowiak/nativeANE/properties/SystemProperties" mod="1343331216000" signatureChecksum="2781994164" >
+        <def id="pl.mateuszmackowiak.nativeANE.properties:SystemProperties" /> 
+        <dep id="pl.mateuszmackowiak.nativeANE.alert:NativeAlert" type="e" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.system:Capabilities" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.utils:Dictionary" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.events:ErrorEvent" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="flash.utils:Dictionary" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="pl/mateuszmackowiak/nativeANE/dialogs/NativeTextField" mod="1334321273000" signatureChecksum="2342296344" >
+        <def id="pl.mateuszmackowiak.nativeANE.dialogs:NativeTextField" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="pl/mateuszmackowiak/nativeANE/NativeDialogEvent" mod="1342564077000" signatureChecksum="2746841864" >
+        <def id="pl.mateuszmackowiak.nativeANE:NativeDialogEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <script name="_ca51e743f068ec996381345d8b8c3e2d89abef81b9e563ef713fee4c85a3d6da_flash_display_Sprite" mod="1343336682478" signatureChecksum="1656323057" >
+        <def id="_ca51e743f068ec996381345d8b8c3e2d89abef81b9e563ef713fee4c85a3d6da_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="pl/mateuszmackowiak/nativeANE/progress/NativeProgress" mod="1343059512000" signatureChecksum="3110910675" >
+        <def id="pl.mateuszmackowiak.nativeANE.progress:NativeProgress" /> 
+        <dep id="pl.mateuszmackowiak.nativeANE:NativeDialogEvent" type="e" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.system:Capabilities" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.events:ErrorEvent" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="pl/mateuszmackowiak/nativeANE/alert/NativeAlert" mod="1343335411000" signatureChecksum="368023768" >
+        <def id="pl.mateuszmackowiak.nativeANE.alert:NativeAlert" /> 
+        <dep id="pl.mateuszmackowiak.nativeANE:NativeDialogEvent" type="e" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.system:Capabilities" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.events:ErrorEvent" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="pl/mateuszmackowiak/nativeANE/notification/NativeNotifiction" mod="1343047158000" signatureChecksum="3401096486" >
+        <def id="pl.mateuszmackowiak.nativeANE.notification:NativeNotifiction" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.system:Capabilities" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="Date" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="pl/mateuszmackowiak/nativeANE/dialogs/NativeTextInputDialog" mod="1343059502000" signatureChecksum="1113574471" >
+        <def id="pl.mateuszmackowiak.nativeANE.dialogs:NativeTextInputDialog" /> 
+        <dep id="pl.mateuszmackowiak.nativeANE:NativeDialogEvent" type="e" /> 
+        <dep id="flash.events:Event" type="e" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.system:Capabilities" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.events:ErrorEvent" type="e" /> 
+        <dep id="__AS3__.vec:Vector" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="pl.mateuszmackowiak.nativeANE.dialogs:NativeTextField" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="pl/mateuszmackowiak/nativeANE/toast/Toast" mod="1343059580000" signatureChecksum="2411396325" >
+        <def id="pl.mateuszmackowiak.nativeANE.toast:Toast" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.system:Capabilities" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+      <script name="pl/mateuszmackowiak/nativeANE/dialogs/NativeListDialog" mod="1343059474000" signatureChecksum="1601262106" >
+        <def id="pl.mateuszmackowiak.nativeANE.dialogs:NativeListDialog" /> 
+        <dep id="pl.mateuszmackowiak.nativeANE:NativeDialogEvent" type="e" /> 
+        <dep id="pl.mateuszmackowiak.nativeANE:NativeDialogListEvent" type="e" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="flash.system:Capabilities" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="flash.events:ErrorEvent" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="pl/mateuszmackowiak/nativeANE/NativeDialogListEvent" mod="1342564118000" signatureChecksum="2763027574" >
+        <def id="pl.mateuszmackowiak.nativeANE:NativeDialogListEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="a508c736cc01e074e99dc37c8bb3cd43dbe70a9d285d2ec7bd27bd5a423185e3"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

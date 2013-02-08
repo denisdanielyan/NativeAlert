@@ -281,7 +281,7 @@ static SVProgressHUD *sharedView = nil;
         CGRect keyboardFrame = [[keyboardInfo valueForKey:@"UIKeyboardFrameBeginUserInfoKey"] CGRectValue];
         animationDuration = [[keyboardInfo valueForKey:@"UIKeyboardAnimationDurationUserInfoKey"] doubleValue];
         
-        if(notification.name == @"UIKeyboardWillShowNotification" || notification.name == @"UIKeyboardDidShowNotification") {
+        if([notification.name isEqual: @"UIKeyboardWillShowNotification"] || [notification.name isEqual: @"UIKeyboardDidShowNotification"]) {
             if(UIInterfaceOrientationIsPortrait(orientation))
                 keyboardHeight = keyboardFrame.size.height;
             else

@@ -1,6 +1,7 @@
-<platform xmlns="http://ns.adobe.com/air/extension/3.1">
+<platform xmlns="http://ns.adobe.com/air/extension/3.5">
     <sdkVersion>4.2</sdkVersion>
     <linkerOptions>
+		<option>-read_only_relocs suppress</option>
         <option>-liconv -w</option>
     </linkerOptions>
 </platform>
